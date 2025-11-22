@@ -14,7 +14,7 @@ const Dock = () => {
 
     const icons = dock.querySelectorAll(".dock-icon");
 
-    const aninmateIcons = (mouseX) => {
+    const animateIcons = (mouseX) => {
       const { left } = dock.getBoundingClientRect();
 
       icons.forEach((icon) => {
@@ -37,7 +37,7 @@ const Dock = () => {
     const handleMouseMove = (e) => {
       const { left } = dock.getBoundingClientRect();
 
-      aninmateIcons(e.clientX - left);
+      animateIcons(e.clientX - left);
     };
 
     const resetIcons = () =>
